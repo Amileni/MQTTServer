@@ -1,4 +1,4 @@
-﻿<mah:MetroWindow x:Class="Crypto.MainWindow"
+﻿<mah:MetroWindow x:Class="MQTTServer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,21 +6,37 @@
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:MQTTServer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
+        Title="MainWindow" Height="450" Width="800" ResizeMode='NoResize'>
+	<Grid>
 
-        <TextBlock x:Name="inputTextBox"
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="50"/>
+		</Grid.RowDefinitions>
+
+		<TextBlock x:Name="inputTextBox"
                    Grid.ColumnSpan="2"/>
-        
-    </Grid>
+		<ProgressBar x:Name="Progress2" Grid.Column="1" HorizontalAlignment="Center" Height="27" Margin="0,323,0,0" VerticalAlignment="Top" Width="298"/>
+		<Ellipse x:Name="LED1" HorizontalAlignment="Left" Height="41" Margin="50,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="41"/>
+		<Ellipse x:Name="LED2" HorizontalAlignment="Left" Height="41" Margin="130,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="41"/>
+		<Ellipse x:Name="LED3" HorizontalAlignment="Left" Height="41" Margin="217,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="41"/>
+		<Ellipse x:Name="LED4" HorizontalAlignment="Left" Height="41" Margin="50,316,0,0" Stroke="Black" VerticalAlignment="Top" Width="41"/>
+		<Ellipse x:Name="LED5" HorizontalAlignment="Left" Height="41" Margin="130,316,0,0" Stroke="Black" VerticalAlignment="Top" Width="41"/>
+		<Ellipse x:Name="LED6" HorizontalAlignment="Left" Height="41" Margin="217,316,0,0" Stroke="Black" VerticalAlignment="Top" Width="41"/>
+		<ProgressBar x:Name="Progress1" Grid.Column="1" HorizontalAlignment="Center" Height="27" Margin="0,74,0,0" VerticalAlignment="Top" Width="298"/>
+		<Label Content="BP1" HorizontalAlignment="Left" Margin="45,144,0,0" VerticalAlignment="Top" Height="34" Width="51" FontSize="20"/>
+		<Label Content="BP2&#xD;&#xA;BP2&#xD;&#xA;" HorizontalAlignment="Left" Margin="130,144,0,0" VerticalAlignment="Top" Height="34" Width="51" FontSize="20"/>
+		<Label Content="BP3" HorizontalAlignment="Left" Margin="212,144,0,0" VerticalAlignment="Top" Height="34" Width="51" FontSize="20"/>
+		<Label Content="BP4" HorizontalAlignment="Left" Margin="45,240,0,0" VerticalAlignment="Top" Height="34" Width="51" FontSize="20"/>
+		<Label Content="BP5" HorizontalAlignment="Left" Margin="130,240,0,0" VerticalAlignment="Top" Height="34" Width="51" FontSize="20"/>
+		<Label Content="BP6" HorizontalAlignment="Left" Margin="212,240,0,0" VerticalAlignment="Top" Height="34" Width="51" FontSize="20"/>
+		<Label Content="Roue 1" HorizontalAlignment="Center" Margin="0,151,0,0" VerticalAlignment="Top" Height="34" Width="88" FontSize="20" Grid.Column="1"/>
+		<Label Content="Roue 2" HorizontalAlignment="Center" Margin="0,247,0,0" VerticalAlignment="Top" Height="34" Width="88" FontSize="20" Grid.Column="1"/>
+
+	</Grid>
 </mah:MetroWindow>
